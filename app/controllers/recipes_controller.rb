@@ -10,6 +10,18 @@ class RecipesController < ApplicationController
         render json: recipe, status: :created
     end
 
+    def destroy
+        recipe = Recipe.find(:id)
+        recipe.destroy
+        head :no_content
+    end
+
+    def update
+        recipe = Recipe.find(:id)
+        recipe.update!(recipe_params)
+        render json: recipe, status: :accepted
+    end
+
     private
     def recipe_params
         params.permit(:title, :instructions, :minutes_to_complete)
