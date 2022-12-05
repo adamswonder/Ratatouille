@@ -166,11 +166,8 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-<<<<<<< HEAD
   active_model_serializers (~> 0.10.12)
-=======
   bcrypt
->>>>>>> user
   debug
   pg (~> 1.1)
   puma (~> 5.0)
