@@ -14,7 +14,7 @@ export default function Navbar() {
             <li>log-in</li>
           </Link>
           <Link to="/new-recipe" className='newRecipe'>
-            <li>recipe</li>
+            <li>add-recipe</li>
           </Link>
           <Link to="/log-out" className='log-out'>
             <li>log out</li>

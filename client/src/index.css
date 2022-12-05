@@ -1,7 +1,15 @@
 .App{
     background-color: black;
+    color: white;
 }
 .footer{
     background-color: #00828c;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
     
+    
+}
+li{
+    list-style: none;
 }
