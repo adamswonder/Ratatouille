@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
   return (
     
-         <div className="col-md-12">
+         <div className="footer">
           <img src="client/src/images/twitter.png" alt="twitter"/> 
           <img src="./src/images/dribble.png" alt="dribble"/> 
           <img src="./src/images/facebook.png" alt="facebook"/>
