@@ -17,4 +17,27 @@ User.create(username:"The Three LIttle Pigs", password:"thethreelittlepiga", pas
 
 
 
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:30)
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:60)
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:50)
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:40)
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:20)
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:60)
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:90)
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:120)
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:45)
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:10)
+
+# Review.create( review:"", user_id:1  , recipe_id:)
+# Review.create( review:"", user_id: 2 , recipe_id:)
+# Review.create( review:"", user_id: 3 , recipe_id:)
+# Review.create( review:"", user_id: 4 , recipe_id:)
+# Review.create( review:"", user_id: 5 , recipe_id:)
+# Review.create( review:"", user_id: 6 , recipe_id:)
+# Review.create( review:"", user_id: 7 , recipe_id:)
+# Review.create( review:"", user_id: 8 , recipe_id:)
+# Review.create( review:"", user_id: 9 , recipe_id:)
+
+
+
 puts "seeded"
