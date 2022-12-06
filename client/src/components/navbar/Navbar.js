@@ -2,7 +2,19 @@ import React from 'react'
 import { Link  } from 'react-router-dom'
 import "./Navbar.css"
 
-export default function Navbar() {
+
+
+export default function Navbar({user ,setUser}) {
+
+  function handleLogoutClick() {
+    fetch("/logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setUser(null);
+      }
+    });
+  }
+
+
   return (
     <nav className='navbar'>
         <h3>
@@ -12,19 +24,20 @@ export default function Navbar() {
           </h3>
         <ul className='nav-links'>
           <Link to="/" className='home'>
-            <li>home</li>
+            <li>HOME</li>
           </Link>
           <Link to="/log-in" className='log-in'>
-            <li>log-in</li>
+            <li>LOG IN</li>
           </Link>
           <Link to="/new-recipe" className='newRecipe'>
-            <li>add-recipe</li>
+            <li>ADD RECIPE</li>
           </Link>
           <Link to="/sign-up" className='sign-up'>
           <li>Sign-up</li>
           </Link>
-          <Link to="/log-out" className='log-out'>
-            <li>log out</li>
+          <Link to="/log-out" className='log-out'
+            variant="outline" onClick={handleLogoutClick}>
+            <li>LOG OUT</li>
           </Link>
 
         </ul>

@@ -5,19 +5,19 @@ import ReactMarkdown from "react-markdown";
 import { Button, Error, FormField, Input, Label, Textarea } from "../styles";
 
 function NewRecipe({ user }) {
-const [title, setTitle] = useState("My Awesome Recipe");
-const [minutesToComplete, setMinutesToComplete] = useState("30");
-const [instructions, setInstructions] = useState(`Here's how you make it.
+  const [title, setTitle] = useState("My Awesome Recipe");
+  const [minutesToComplete, setMinutesToComplete] = useState("30");
+  const [instructions, setInstructions] = useState(`Here's how you make it.
   
-// ## Ingredients
+## Ingredients
 
-// - 1c Sugar
-// ## Instructions
+- 1c Sugar
+## Instructions
 
-// **Mix** sugar and spice. _Bake_ for 30 minutes.
-// - 1c Spice
+**Mix** sugar and spice. _Bake_ for 30 minutes.
+- 1c Spice
 
-//   `);
+  `);
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
@@ -25,27 +25,27 @@ const [instructions, setInstructions] = useState(`Here's how you make it.
   function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
-    // fetch("/recipes", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({
-    //     title,
-    //     instructions,
-    //     minutes_to_complete: minutesToComplete,
-    //   }),
-    // }).then((r) => {
-    //   setIsLoading(false);
-    //   if (r.ok) {
-    //     history.push("/");
-    //   } else {
-    //     r.json().then((err) => setErrors(err.errors));
-    //   }
-    // });
+    fetch("/recipes", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        title,
+        instructions,
+        minutes_to_complete: minutesToComplete,
+      }),
+    }).then((r) => {
+      setIsLoading(false);
+      if (r.ok) {
+        history.push("/");
+      } else {
+        r.json().then((err) => setErrors(err.errors));
+      }
+    });
   }
 
-return (
+  return (
     <Wrapper>
       <WrapperChild>
         <h2>Create Recipe</h2>
@@ -79,13 +79,27 @@ return (
           </FormField>
           <FormField>
             <Button color="primary" type="submit">
-              {isLoading ? "Loading..." : "Upload"}
+              {isLoading ? "Loading..." : "Submit Recipe"}
             </Button>
           </FormField>
-        </form>  
+          <FormField>
+            {errors.map((err) => (
+              <Error key={err}>{err}</Error>
+            ))}
+          </FormField>
+        </form>
+      </WrapperChild>
+      <WrapperChild>
+        <h1>{title}</h1>
+        <p>
+          <em>Time to Complete: {minutesToComplete} minutes</em>
+          &nbsp;·&nbsp;
+          <cite>By {user.username}</cite>
+        </p>
+        <ReactMarkdown>{instructions}</ReactMarkdown>
       </WrapperChild>
     </Wrapper>
-);
+  );
 }
 
 const Wrapper = styled.section`
