@@ -1,6 +1,8 @@
 puts "destroying users"
 
 User.destroy_all
+Review.destroy_all
+Recipe.destroy_all
 
 puts "start seeding"
 
@@ -16,28 +18,24 @@ User.create(username:"Peter Pan", password:"peterpan", password_confirmation:"pe
 User.create(username:"The Three LIttle Pigs", password:"thethreelittlepiga", password_confirmation:"thethreelittlepigs",image_url:"https://charactersdb.com/wp-content/uploads/three-little-pigs-shrek.jpg", bio:"He huffed, and he puffed… and he signed an eviction notice.")
 
 
+Recipe.create!(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes_to_complete:30, user_id: rand(1..10))
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes_to_complete:60, user_id: rand(1..10))
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes_to_complete:50, user_id: rand(1..10))
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes_to_complete:40, user_id: rand(1..10))
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes_to_complete:20, user_id: rand(1..10))
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes_to_complete:60, user_id: rand(1..10))
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes_to_complete:90, user_id: rand(1..10))
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes_to_complete:120, user_id: rand(1..10))
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes_to_complete:45, user_id: rand(1..10))
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes_to_complete:10, user_id: rand(1..10))
 
-Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:30)
-Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:60)
-Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:50)
-Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:40)
-Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:20)
-Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:60)
-Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:90)
-Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:120)
-Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:45)
-Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:10)
-
+5.times  do
+    Review.create(
+        content: "Faker::Lorem.word", user_id: rand(1..10) , recipe_id: rand(1..10)
+    )
+end
 # Review.create( review:"", user_id:1  , recipe_id:)
-# Review.create( review:"", user_id: 2 , recipe_id:)
-# Review.create( review:"", user_id: 3 , recipe_id:)
-# Review.create( review:"", user_id: 4 , recipe_id:)
-# Review.create( review:"", user_id: 5 , recipe_id:)
-# Review.create( review:"", user_id: 6 , recipe_id:)
-# Review.create( review:"", user_id: 7 , recipe_id:)
-# Review.create( review:"", user_id: 8 , recipe_id:)
-# Review.create( review:"", user_id: 9 , recipe_id:)
-
-
 
 puts "seeded"
+
+# TODO: change t.text to t.string in migration files
