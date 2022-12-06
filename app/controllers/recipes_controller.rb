@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-    before_action :authorize
+    # before_action :authorize
     def index
         render json: Recipe.all
     end
