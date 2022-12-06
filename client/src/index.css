@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC|Roboto&display=swap');
+
 .App{
     background-color: black;
     color: white;
+    text-align: center;
 }
 .footer{
     background-color: #00828c;
@@ -12,4 +15,9 @@
 }
 li{
     list-style: none;
+}
+.LoginForm{
+    text-align: center;
+    justify-content: center;
+    
 }

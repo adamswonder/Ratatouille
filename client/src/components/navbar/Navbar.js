@@ -8,16 +8,16 @@ export default function Navbar() {
         <h3 className='logo' >RATATOULIE</h3>
         <ul className='nav-links'>
           <Link to="/" className='home'>
-            <li>home</li>
+            <li>HOME</li>
           </Link>
           <Link to="/log-in" className='log-in'>
-            <li>log-in</li>
+            <li>LOG IN</li>
           </Link>
           <Link to="/new-recipe" className='newRecipe'>
-            <li>add-recipe</li>
+            <li>ADD RECIPE</li>
           </Link>
           <Link to="/log-out" className='log-out'>
-            <li>log out</li>
+            <li>LOG OUT</li>
           </Link>
 
         </ul>
