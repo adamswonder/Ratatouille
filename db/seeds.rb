@@ -17,7 +17,9 @@ User.create(username:"The Three LIttle Pigs", password:"thethreelittlepiga", pas
 
 
 
-Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:30)
+
+
+Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:30,)
 Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:60)
 Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:50)
 Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:40)
