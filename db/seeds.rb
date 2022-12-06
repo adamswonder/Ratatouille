@@ -34,7 +34,7 @@ Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", 
         content: "Faker::Lorem.word", user_id: rand(1..10) , recipe_id: rand(1..10)
     )
 end
-# Review.create( review:"", user_id:1  , recipe_id:)
+
 
 puts "seeded"
 
