@@ -1,8 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 .navbar{
     display:flex;
     justify-content: space-around;
@@ -10,6 +5,7 @@
     height: 75px;
     background-color: #00828c;
     color: aliceblue;
+    
 }
 .logo{
     font-size: 30px;
@@ -25,6 +21,7 @@
 .home,
 .log-in,
 .newRecipe,
+.sign-up,
 .log-out{
     text-decoration: none;
     color: white;

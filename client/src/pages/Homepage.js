@@ -1,13 +1,15 @@
-import React from 'react'
-import Example1 from '../components/Example1'
-import Example2 from '../components/Example2'
+import React from 'react';
+import Example1 from '../components/Example1';
+import Search from '../components/Search';
+
 
 function Homepage() {
   return (
-    <div className="homepage">
-        <Example1/>
-        <Example2/>
-    </div>
+   <div className='homepage'>
+    <Search/>
+     <Example1/>
+     <Example1/>
+   </div>
   )
 }
 

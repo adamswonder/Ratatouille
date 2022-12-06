@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Homepage from "./Homepage";
 import LoginForm from "../components/LoginForm";
 import NewRecipe from "./NewRecipe";
+import SignUpForm from "../components/SignUpForm";
 import React from 'react'
 import { BrowserRouter as Router, Route,Switch } from "react-router-dom";
 
@@ -22,11 +23,15 @@ function Pages() {
         <Route path='/new-recipe' component={ NewRecipe } exact>
          <NewRecipe/> 
         </Route>
+        <Route path='/sign-up' component={ SignUpForm } exact>
+          <SignUpForm/>
+        </Route>
 
       </Switch>
 
 
       <Footer/>
+
       </Router>
     </div>
   )

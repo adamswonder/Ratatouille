@@ -5,7 +5,11 @@ import "./Navbar.css"
 export default function Navbar() {
   return (
     <nav className='navbar'>
-        <h3 className='logo' >RATATOULIE</h3>
+        <h3>
+          <Link to="/" className='home'>
+            <li className='logo'>RATATOULLIE</li>
+          </Link>
+          </h3>
         <ul className='nav-links'>
           <Link to="/" className='home'>
             <li>home</li>
@@ -15,6 +19,9 @@ export default function Navbar() {
           </Link>
           <Link to="/new-recipe" className='newRecipe'>
             <li>add-recipe</li>
+          </Link>
+          <Link to="/sign-up" className='sign-up'>
+          <li>Sign-up</li>
           </Link>
           <Link to="/log-out" className='log-out'>
             <li>log out</li>
