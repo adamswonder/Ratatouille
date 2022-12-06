@@ -30,16 +30,6 @@ Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", 
 Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:45)
 Recipe.create(title:"Faker::Food.dish", instructions:"Faker::Food.description", minutes:10)
 
-# Review.create( review:"Excellent", user_id:1, recipe_id:)
-# Review.create( review:"Good", user_id: 2 , recipe_id:)
-# Review.create( review:"Very Good", user_id: 3 , recipe_id:)
-# Review.create( review:"Average", user_id: 4 , recipe_id:)
-# Review.create( review:"Excellent", user_id: 5 , recipe_id:)
-# Review.create( review:"Poor", user_id: 6 , recipe_id:)
-# Review.create( review:"Poor", user_id: 7 , recipe_id:)
-# Review.create( review:"Very Good", user_id: 8 , recipe_id:)
-# Review.create( review:"Excellent", user_id: 9 , recipe_id:)
-
 
 
 puts "seeded"
