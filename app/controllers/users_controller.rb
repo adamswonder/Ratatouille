@@ -19,6 +19,10 @@ rescue_from ActiveRecord::RecordInvalid, with: :render_record_invalid
             
     end
 
+    def index
+        render json: User.all
+    end
+
     private
 
     def user_params
