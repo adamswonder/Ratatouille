@@ -12,9 +12,9 @@ rescue_from ActiveRecord::RecordInvalid, with: :render_record_invalid
         # return logged in user details
         user = User.find_by(id: session[:user_id])
         if user
-        render json: user, status: :ok
+            render json: user, status: :ok
         else
-        render json: {errors: "unauthorized"}, status: :unauthorized
+            render json: {errors: "unauthorized"}, status: :unauthorized
         end
             
     end
