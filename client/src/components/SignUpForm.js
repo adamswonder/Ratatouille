@@ -69,16 +69,7 @@ function SignUpForm({ onLogin }) {
         />
       </FormField>
       <FormField>
-        <Label htmlFor="imageUrl">Profile Image</Label>
-        <Input
-          type="text"
-          id="imageUrl"
-          value={imageUrl}
-          onChange={(e) => setImageUrl(e.target.value)}
-        />
-      </FormField>
-      <FormField>
-        <Label htmlFor="bio">Bio</Label>
+        <Label htmlFor="bio">Auto-Bio</Label>
         <Textarea
           rows="3"
           id="bio"
