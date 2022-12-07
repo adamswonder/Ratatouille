@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+    rescue_from ActiveRecord::RecordNotFound, with: :render_record_not_found_response
     before_action :authorize
     def index
         render json: Recipe.all
@@ -29,5 +30,9 @@ class RecipesController < ApplicationController
 
     def authorize
         return render json: {errors: ["Not authorized"]}, status: :unauthorized unless session.include? :user_id
+    end
+
+    def render_not_found_response
+        render json: { errors: "Recipe not found"}, status: :not_found
     end
 end
