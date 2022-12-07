@@ -4,6 +4,6 @@ class Recipe < ApplicationRecord
 
     # validation
     validates :title, presence: true
-    validates :instructions, presence: true, length: { minimum: 50 }
+    validates :instructions, presence: true, length: { minimum: 5 }
     validates :minutes_to_complete, presence: true
 end
