@@ -1,14 +1,12 @@
 *{
     margin:0;
     padding:0;
-    box-sizing:border-box;
     font-family: 'Montserrat',sans-serif;
 }
 
 .App{
-    margin: 0 0.5%;
+    margin: 0 0%;
     color: black;
-
     text-align: center;
 }
 .footer{
@@ -17,10 +15,20 @@
     display: flex;
     justify-content: space-around; 
 }
-
-.search-bar{
-    background-color: black;
+.search,.log-ined{
+    background-image: url(https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
     background-size: 100% ;
+    padding: 4.5pc;
+}
+.search-bar{
+    margin: 1rem 0;
+    width: 400px;
+    height: 40px;
+    outline: none;
+    border-radius: 1rem;
+    padding: 0.3rem 1rem;
+
+
 }
 li{
     list-style: none;
@@ -29,12 +37,33 @@ form{
    padding: 6pc;
    width: 100;
 }
+
+.log-ined{
+    border-radius: 1pc;
+    background-repeat: no-repeat;
+}
 .LoginForm{
     text-align: center;
     justify-content: center;
 }
 .head{
-    font-size: 25px;
-    color: white;
+    font-size: 40px;
+    padding: 1pc;
 
+}
+.meal-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5rem;
+}
+.numBox{
+    width:50px;
+    height:40px;
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0 5px 0 5px;
+    padding: 1px;
 }

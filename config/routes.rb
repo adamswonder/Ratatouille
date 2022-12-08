@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :reviews
-  resources :recipes, only: [:index]
+  resources :recipes, only: [:index, :show]
   resources :users
 
   #TODO: create custom routes for Login and Sign Up

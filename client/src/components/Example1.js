@@ -1,18 +1,10 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import {Splide,SplideSlide} from '@splidejs/react-splide'
 import '@splidejs/react-splide/css';
 import { Button } from "../styles";
 
-function Example1() {
-  const [recipes, setRecipes] = useState([]);
-
-  useEffect(() => {
-    fetch("/recipes")
-      .then((r) => r.json())
-      .then(setRecipes);
-  }, []);
+function Example1( {recipes} ) {
 
   return (
     <Wrapper>
@@ -38,12 +30,12 @@ function Example1() {
           </SplideSlide>
         ))
       ) : (
-        <>
-          <h2>No Recipes Found</h2>
+        <div className="dived" >
+          <h2>No Recipes Found</h2> <br/>
           <Button as={Link} to="/new">
             Make a New Recipe
           </Button>
-        </>
+        </div>
       )} 
       </Splide>
     </Wrapper>
@@ -87,6 +79,7 @@ const Card = styled.div`
     justify-content: centre;
     align-items:centre;
   }
+
 `;
 
 const Gradient = styled.div`
