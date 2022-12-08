@@ -15,7 +15,7 @@ function NavBar({ user, setUser }) {
   return (
     <Wrapper>
       <Logo>
-        <Link to="/">Ratatouille</Link>
+        <Link to="/">Ratatouille ?</Link>
       </Logo>
       <Nav>
         <Button as={Link} to="/new">
@@ -39,7 +39,7 @@ const Wrapper = styled.header`
 const Logo = styled.h1`
   font-family: "Permanent Marker", cursive;
   font-size: 3rem;
-  color: deeppink;
+  color:  #F94223;
   margin: 0;
   line-height: 1;
 
@@ -51,7 +51,7 @@ const Logo = styled.h1`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 4px;
+  gap: 10px;
   position: absolute;
   right: 8px;
 `;
