@@ -1,11 +1,12 @@
 import React from 'react'
+import '../index.css'
 
 function Footer() {
   return (
     <footer>
       <div className='footer'>
         <div>
-        <h1> RATATOULIE </h1> <br />
+        <h1> RATATOULIE </h1>
         <p>Find and share everyday cooking inspiration on Allrecipes.<br/> Discover recipes, cooks, videos, and<br/> how-tos based on the food you love and the friends you follow</p>
         </div>
         <section>
