@@ -3,13 +3,13 @@
     color: white;
 }
 .footer{
-    background-color: #00828c;
-    text-align: center;
+    background-color: #F94223;
+    text-align: left;
     display: flex;
-    justify-content: space-around;
-    
-    
+    justify-content: space-evenly; 
+    color: white;   
 }
+
 li{
     list-style: none;
 }
