@@ -37,7 +37,7 @@ function Footer() {
             </ul>
         </section>
     </div> <hr />
-    <div style={{display: "flex", justifyContent: "space-evenly"}}>
+    <div style={{display: "flex", justifyContent: "center"}}>
         <p> &copy; 2022 RATATOULIE, Kenya. All rights reserved.</p>
         <p>
             <i className="fa-brands fa-facebook"></i> &nbsp; 
