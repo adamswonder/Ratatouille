@@ -3,8 +3,9 @@ import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Box, Button } from "../styles";
+import landing from "./landing.jpg"
 
-function RecipeList() {
+function RecipeList({ search }) {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
@@ -14,40 +15,51 @@ function RecipeList() {
   }, []);
 
   return (
-    <Wrapper>
-      {recipes.length > 0 ? (
-        recipes.map((recipe) => (
-          <Recipe key={recipe.id}>
-            <Box>
-              <h2>{recipe.title}</h2>
-              <p>
-                <em>Time to Complete: {recipe.minutes_to_complete} minutes</em>
-                &nbsp;·&nbsp;
-                <cite>By {recipe.user.username}</cite>
-              </p>
-              <ReactMarkdown>{recipe.instructions}</ReactMarkdown>
-            </Box>
-          </Recipe>
-        ))
-      ) : (
-        <>
-          <h2>No Recipes Found</h2>
-          <Button as={Link} to="/new">
-            Make a New Recipe
-          </Button>
-        </>
-      )}
-    </Wrapper>
+    <>
+      <Wrapper>
+        <img class="landing" src={landing} alt="Landing Page" />;
+      </Wrapper>
+      <Wrapper>
+        {recipes.length > 0 ? (
+          recipes.map((recipe) => (
+            <Recipe key={recipe.id}>
+              <Box>
+                <h2>{recipe.title}</h2>
+                <p>
+                  <em>Time to Complete: {recipe.minutes_to_complete} minutes</em>
+                  &nbsp;·&nbsp;
+                  <cite>By {recipe.user.username}</cite>
+                </p>
+                <ReactMarkdown>{recipe.instructions}</ReactMarkdown>
+              </Box>
+            </Recipe>
+          ))
+        ) : (
+          <>
+            <h2>No Recipes Found</h2>
+            <Button as={Link} to="/new">
+              Make a New Recipe
+            </Button>
+          </>
+        )}
+      </Wrapper>
+    </>
   );
 }
 
 const Wrapper = styled.section`
-  max-width: 800px;
+  max-width: 100vw;
   margin: 40px auto;
+  display: flex;
+  flex: row;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const Recipe = styled.article`
   margin-bottom: 24px;
+  width: 30%;
 `;
+const 
 
 export default RecipeList;
