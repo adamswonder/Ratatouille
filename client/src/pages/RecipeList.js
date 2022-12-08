@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import RecipeIndex from "../components/RecipeIndex";
 import { Box, Button } from "../styles";
 import landing from "./landing.jpg"
 
@@ -18,6 +19,7 @@ function RecipeList({ search }) {
     <>
       <Wrapper>
         <img class="landing" src={landing} alt="Landing Page" />;
+        <RecipeIndex/>
       </Wrapper>
       <Wrapper>
         {recipes.length > 0 ? (
@@ -54,7 +56,9 @@ const Wrapper = styled.section`
   flex: row;
   flex-wrap: wrap;
   justify-content: center;
-`;
+`
+
+;
 
 const Recipe = styled.article`
   margin-bottom: 24px;
