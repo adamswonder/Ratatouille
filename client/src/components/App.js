@@ -8,6 +8,7 @@ import Footer from "./Footer";
 
 function App() {
   const [user, setUser] = useState(null);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     // keep the user session {maintain login}
@@ -22,7 +23,7 @@ function App() {
 
   return (
     <>
-      <NavBar user={user} setUser={setUser} />
+      <NavBar user={user} setUser={setUser} searchChange={setSearch}/>
       <main>
         <Switch>
           <Route path="/new">
