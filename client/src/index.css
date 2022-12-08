@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-around; 
 }
-.search,.log-ined{
+.search,.log-ined,.sign-up-form{
     background-image: url(https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
     background-size: 100% ;
     padding: 4.5pc;
@@ -38,9 +38,10 @@ form{
    width: 100;
 }
 
-.log-ined{
+.log-ined,.sign-up-form{
     border-radius: 1pc;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .LoginForm{
     text-align: center;

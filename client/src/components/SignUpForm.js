@@ -14,7 +14,7 @@ function SignUpForm({ onLogin }) {
     e.preventDefault();
     setErrors([]);
     setIsLoading(true);
-    fetch("/signup", {
+    fetch("/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -24,7 +24,7 @@ function SignUpForm({ onLogin }) {
         password,
         password_confirmation: passwordConfirmation,
         image_url: imageUrl,
-        bio,
+        bio
       }),
     }).then((r) => {
       setIsLoading(false);
@@ -37,7 +37,7 @@ function SignUpForm({ onLogin }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="sign-up-form">
       <FormField>
         <Label htmlFor="username">Username</Label>
         <Input
