@@ -60,6 +60,5 @@ const Recipe = styled.article`
   margin-bottom: 24px;
   width: 30%;
 `;
-const 
 
 export default RecipeList;
