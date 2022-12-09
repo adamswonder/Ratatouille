@@ -13,3 +13,8 @@
 li{
     list-style: none;
 }
+.image {
+    background-image: url("./pages/landing.jpg");
+    padding: 10%;
+    background-position: no-repeat;
+}
