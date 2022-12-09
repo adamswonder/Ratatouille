@@ -13,7 +13,7 @@ class RecipesController < ApplicationController
     # POST /recipes
     def create
         user = User.find(session[:user_id])
-        recipe = Recipe.create!(user_id: user.id, title: recipe_params[:title], instructions: recipe_params[:instructions], minutes_to_complete: recipe_params[:minutes_to_complete])
+        recipe = Recipe.create!(user_id: user.id, title: recipe_params[:title], instructions: recipe_params[:instructions], minutes_to_complete: recipe_params[:minutes_to_complete], image_url: recipe_params[:image_url])
         render json: recipe, status: :created
     end
     # DELETE /recipes/:id
@@ -35,7 +35,7 @@ class RecipesController < ApplicationController
     end
     
     def recipe_params
-        params.permit(:title, :instructions, :minutes_to_complete)
+        params.permit(:title, :instructions, :minutes_to_complete, :image_url)
     end
 
     def authorize
