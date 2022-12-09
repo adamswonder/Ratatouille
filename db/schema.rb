@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_05_122108) do
     t.string "title"
     t.text "instructions"
     t.integer "minutes_to_complete"
+    t.string "image_url"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
