@@ -16,13 +16,15 @@ function RecipeList({ search }) {
       .then(setRecipes);
   }, []);
 
+  // console.log(recipes.map((recipe)=>recipe.title.toLowerCase().includes("my")));
+
   return (
     <>
       <Wrapper className="background">
       </Wrapper>
       <Wrapper>
         {recipes.length > 0 ? (
-          recipes.map((recipe) => (
+          recipes.filter(recipes=>recipes.title.toLowerCase().includes(search)).map((recipe) => (
             <Recipe key={recipe.id}>
               <Box>
                 <img src={recipe.image_url} alt="Holder" />
@@ -68,7 +70,9 @@ const Wrapper = styled.section`
   flex: row;
   flex-wrap: wrap;
   justify-content: center;
-`;
+`
+
+;
 
 const Recipe = styled.article`
   margin-bottom: 24px;
