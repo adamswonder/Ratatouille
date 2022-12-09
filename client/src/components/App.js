@@ -30,7 +30,7 @@ function App() {
             <NewRecipe user={user} />
           </Route>
           <Route path="/">
-            <RecipeList search={ search }/>
+            <RecipeList search={ search } searchChange={setSearch}/>
           </Route>
         </Switch>
         <Footer />

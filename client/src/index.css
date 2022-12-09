@@ -10,11 +10,20 @@
     color: white;   
 }
 
-li{
+.footer li{
     list-style: none;
 }
 .background {
     background-image: url("./pages/landing.jpg");
     padding: 10%;
     background-position: no-repeat;
+}
+#search {
+    width: 50%;
+    height: 60px;
+    border: none;
+    border-radius: 25px;
+    opacity: 60%;
+    font-size: large;
+    text-align: center;
 }

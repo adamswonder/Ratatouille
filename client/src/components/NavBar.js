@@ -17,12 +17,6 @@ function NavBar({ user, setUser, searchChange }) {
       <Logo>
         <Link to="/">Ratatouille ?</Link>
       </Logo>
-      <input
-        id="search"
-        type="text"
-        placeholder="Search here ..."
-        onChange={(e) => searchChange(e.target.value)}
-      />
       <Nav>
         <Button as={Link} to="/new">
           New Recipe
