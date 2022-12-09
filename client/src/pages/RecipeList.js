@@ -18,7 +18,7 @@ function RecipeList({ search }) {
 
   return (
     <>
-      <Wrapper className="image">
+      <Wrapper className="background">
       </Wrapper>
       <Wrapper>
         {recipes.length > 0 ? (
