@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import RecipeIndex from "../components/RecipeIndex";
 import { Box, Button } from "../styles";
 import landing from "./landing.jpg"
 
@@ -15,15 +14,17 @@ function RecipeList({ search }) {
       .then(setRecipes);
   }, []);
 
+  // console.log(recipes.map((recipe)=>recipe.title.toLowerCase().includes("my")));
+
   return (
     <>
-      <Wrapper>
-        <img class="landing" src={landing} alt="Landing Page" />;
-        <RecipeIndex/>
+      <Wrapper className="landing">
+        
+        
       </Wrapper>
       <Wrapper>
         {recipes.length > 0 ? (
-          recipes.map((recipe) => (
+          recipes.filter(recipes=>recipes.title.toLowerCase().includes(search)).map((recipe) => (
             <Recipe key={recipe.id}>
               <Box>
                 <h2>{recipe.title}</h2>
