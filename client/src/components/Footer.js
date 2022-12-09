@@ -1,11 +1,12 @@
 import React from 'react'
+import '../index.css'
 
 function Footer() {
   return (
     <footer>
       <div className='footer'>
         <div>
-        <h1> RATATOULIE </h1> <br />
+        <h1> RATATOULIE </h1>
         <p>Find and share everyday cooking inspiration on Allrecipes.<br/> Discover recipes, cooks, videos, and<br/> how-tos based on the food you love and the friends you follow</p>
         </div>
         <section>
@@ -36,7 +37,7 @@ function Footer() {
             </ul>
         </section>
     </div> <hr />
-    <div style={{display: "flex", justifyContent: "space-evenly"}}>
+    <div style={{display: "flex", justifyContent: "center"}}>
         <p> &copy; 2022 RATATOULIE, Kenya. All rights reserved.</p>
         <p>
             <i className="fa-brands fa-facebook"></i> &nbsp; 

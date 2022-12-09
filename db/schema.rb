@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_05_122108) do
     t.string "title"
     t.text "instructions"
     t.integer "minutes_to_complete"
+    t.string "image_url"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -34,7 +35,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_05_122108) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
-    t.string "image_url"
     t.string "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

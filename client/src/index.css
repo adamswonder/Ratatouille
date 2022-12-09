@@ -3,13 +3,31 @@
     color: white;
 }
 .footer{
-    background-color: #00828c;
-    text-align: center;
+    background-color: #F94223;
+    text-align: left;
     display: flex;
-    justify-content: space-around;
-    
-    
+    justify-content: space-evenly; 
+    color: white;   
 }
-li{
+
+.footer li{
     list-style: none;
+}
+.background {
+    background-image: url("./pages/landing.jpg");
+    padding: 10%;
+    background-position: no-repeat;
+}
+#search {
+    width: 50%;
+    height: 60px;
+    border: none;
+    border-radius: 25px;
+    opacity: 60%;
+    font-size: large;
+    text-align: center;
+}
+
+.card {
+    object-fit: cover;
 }
