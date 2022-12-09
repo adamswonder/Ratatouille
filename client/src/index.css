@@ -27,3 +27,7 @@
     font-size: large;
     text-align: center;
 }
+
+.card {
+    object-fit: cover;
+}

@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import RecipeList from "../pages/RecipeList";
 import NewRecipe from "../pages/NewRecipe";
 import Footer from "./Footer";
+import UpdateRecipe from "../pages/UpdateRecipe";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -23,7 +24,7 @@ function App() {
 
   return (
     <>
-      <NavBar user={user} setUser={setUser} searchChange={setSearch}/>
+      <NavBar user={user} setUser={setUser} />
       <main>
         <Switch>
           <Route path="/new">
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/">
             <RecipeList search={ search } searchChange={setSearch}/>
+          </Route>
+          <Route path="/update">
+            <UpdateRecipe user={user}/>
           </Route>
         </Switch>
         <Footer />

@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles";
+import { RiInstagramFill } from "react-icons/ri"
+
 
 function NavBar({ user, setUser, searchChange }) {
   function handleLogoutClick() {
@@ -14,8 +16,12 @@ function NavBar({ user, setUser, searchChange }) {
 
   return (
     <Wrapper>
+      <div className="socials">
+        <RiInstagramFill style={{ color: '#F94223', fontSize: '35px' }} /><RiInstagramFill style={{ color: '#F94223', fontSize: '35px' }} /><RiInstagramFill style={{ color: '#F94223', fontSize: '35px' }} />
+      </div>
       <Logo>
-        <Link to="/">Ratatouille ?</Link>
+      {/* <RiInstagramFill style={{ color: '#F94223', fontSize: '35px' }} /><RiInstagramFill style={{ color: '#F94223', fontSize: '35px' }} /><RiInstagramFill style={{ color: '#F94223', fontSize: '35px' }} /> */}
+        <Link to="/">Ratatouille</Link>
       </Logo>
       <Nav>
         <Button as={Link} to="/new">
@@ -31,14 +37,16 @@ function NavBar({ user, setUser, searchChange }) {
 
 const Wrapper = styled.header`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  text-align: center;
   align-items: center;
   padding: 8px;
+
 `;
 
 const Logo = styled.h1`
   font-family: "Permanent Marker", cursive;
-  font-size: 3rem;
+  font-size: 4rem;
   color:  #F94223;
   margin: 0;
   line-height: 1;
@@ -53,7 +61,7 @@ const Nav = styled.nav`
   display: flex;
   gap: 10px;
   position: absolute;
-  right: 8px;
+  right: 20px;
 `;
 
 export default NavBar;

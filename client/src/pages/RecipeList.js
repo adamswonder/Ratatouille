@@ -3,9 +3,7 @@ import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Box, Button } from "../styles";
-// import landing from "./landing.jpg";
 import "../index.css"
-// import NavBar from "../components/NavBar";
 
 function RecipeList({ searchChange, search }) {
   const [recipes, setRecipes] = useState([]);
@@ -15,8 +13,6 @@ function RecipeList({ searchChange, search }) {
       .then((r) => r.json())
       .then(setRecipes);
   }, []);
-
-  // console.log(recipes.map((recipe)=>recipe.title.toLowerCase().includes("my")));
 
   return (
     <>
@@ -33,7 +29,8 @@ function RecipeList({ searchChange, search }) {
           recipes.filter(recipes => recipes.title.toLowerCase().includes(search)).map((recipe) => (
             <Recipe key={recipe.id}>
               <Box>
-                <img src={recipe.image_url} alt="Holder" />
+                {/* TODO: RESIZE IMAGE HOLDERS */}
+                <img src={recipe.image_url} alt="Holder" style={{maxWidth:500, maxHeight:600}}/>
                 <h2>{recipe.title}</h2>
                 <p>
                   <em>Time to Complete: {recipe.minutes_to_complete} minutes</em>
@@ -41,7 +38,13 @@ function RecipeList({ searchChange, search }) {
                   <cite>By {recipe.user.username}</cite>
                 </p>
                 <ReactMarkdown>{recipe.instructions}</ReactMarkdown>
-                <Button as={Link} to="/update">
+                {/* TODO: work on update */}
+                <Button onClick={()=>{
+                  fetch(`/recipes/${recipe.id}`,{
+                    method:"PATCH"
+                  }).then((r)=>r.json())
+                  .then((data)=> data.map(d => d.id !== recipe.id))
+                }} as={Link} to="/update">
                   Edit
                 </Button>
                 <Button onClick={() => {
