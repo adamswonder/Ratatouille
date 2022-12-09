@@ -20,6 +20,7 @@ function NewRecipe({ user }) {
   `);
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [imageUrl, setImageUrl] = useState("")
   const history = useHistory();
 
   function handleSubmit(e) {
@@ -34,6 +35,7 @@ function NewRecipe({ user }) {
         title,
         instructions,
         minutes_to_complete: minutesToComplete,
+        image_url: imageUrl
       }),
     }).then((r) => {
       setIsLoading(false);
@@ -75,6 +77,15 @@ function NewRecipe({ user }) {
               rows="10"
               value={instructions}
               onChange={(e) => setInstructions(e.target.value)}
+            />
+          </FormField>
+          <FormField>
+            <Label htmlFor="imageUrl">Recipe Image</Label>
+            <Input
+              type="text"
+              id="imageUrl"
+              value={imageUrl}
+              onChange={(e) => setImageUrl(e.target.value)}
             />
           </FormField>
           <FormField>

@@ -17,11 +17,16 @@ User.create(username:"Bishop", password:"bishop", password_confirmation:"bishop"
 User.create(username:"Peter Pan", password:"peterpan", password_confirmation:"peterpan", bio:"He can fly." )
 User.create(username:"The Three LIttle Pigs", password:"thethreelittlepiga", password_confirmation:"thethreelittlepigs", bio:"He huffed, and he puffed… and he signed an eviction notice.")
 
-10.times do
-    Recipe.create(
-        title: Faker::Food.dish, instructions: Faker::Food.description, minutes_to_complete:rand(1..100), user_id: rand(1..10)
-    )
-end
+Recipe.create(title: Faker::Food.dish, instructions: Faker::Food.description, minutes_to_complete:rand(1..100), image_url:"https://i.ibb.co/XZtSb46/BFV13909-Baked-Ratatouille-Thumb-Textless1080.jpg", user_id: rand(1..10))
+Recipe.create(title: Faker::Food.dish, instructions: Faker::Food.description, minutes_to_complete:rand(1..100), image_url:"https://i.ibb.co/cc0WRSM/Shakshuka-19.jpg", user_id: rand(1..10))
+Recipe.create(title: Faker::Food.dish, instructions: Faker::Food.description, minutes_to_complete:rand(1..100), image_url:"https://i.ibb.co/WkX3dG7/samosa-recipe-500x375.jpg", user_id: rand(1..10))
+Recipe.create(title: Faker::Food.dish, instructions: Faker::Food.description, minutes_to_complete:rand(1..100), image_url:"https://i.ibb.co/YD1MMb1/oyakodon-japanese-chicken-and-egg-rice-bowl-recipe-hero-f2d42cfe8e8e4436b97d6e79d038d9bc.jpg", user_id: rand(1..10))
+Recipe.create(title: Faker::Food.dish, instructions: Faker::Food.description, minutes_to_complete:rand(1..100), image_url:"https://i.ibb.co/SXF8SQJ/Campbells-x-Richard-Blais-Tomato-Rigatoni-alla-Vodka-recipe-card-1106x830.jpg", user_id: rand(1..10))
+Recipe.create(title: Faker::Food.dish, instructions: Faker::Food.description, minutes_to_complete:rand(1..100), image_url:"https://i.ibb.co/PhCfmp6/chicken-chickpea-curry-163942-1.jpg", user_id: rand(1..10))
+Recipe.create(title: Faker::Food.dish, instructions: Faker::Food.description, minutes_to_complete:rand(1..100), image_url:"https://i.ibb.co/qpxFmbx/COOK90-Butter-Paneer-RECIPE-V2-121119-288.jpg", user_id: rand(1..10))
+Recipe.create(title: Faker::Food.dish, instructions: Faker::Food.description, minutes_to_complete:rand(1..100), image_url:"https://i.ibb.co/9g1vJGh/Puttanesca-fd5810c.jpg", user_id: rand(1..10))
+Recipe.create(title: Faker::Food.dish, instructions: Faker::Food.description, minutes_to_complete:rand(1..100), image_url:"https://i.ibb.co/yFmT102/0-C4-A9799-368x463.jpg", user_id: rand(1..10))
+Recipe.create(title: Faker::Food.dish, instructions: Faker::Food.description, minutes_to_complete:rand(1..100), image_url:"https://i.ibb.co/QHYvPFw/Lamb-Chops-Sizzled-with-Garlic-FT-RECIPE0822-2000-a8c82475f602427e86083f2db1ecd37c.jpg", user_id: rand(1..10))
 
 5.times  do
     Review.create(
