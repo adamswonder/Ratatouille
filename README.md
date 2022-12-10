@@ -5,7 +5,7 @@
 # Table of Contents
 ​
   - [RATATOUILIE](#RATATOUILIE)
-  - [By Authors below:-](#by-authors-below-)
+  - [By Authors below:-](#authors)
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Technologies Used](#technologies-used)
