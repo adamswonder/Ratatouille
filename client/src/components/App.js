@@ -10,6 +10,7 @@ import UpdateRecipe from "../pages/UpdateRecipe";
 function App() {
   const [user, setUser] = useState(null);
   const [search, setSearch] = useState("");
+  const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
     // keep the user session {maintain login}
@@ -24,17 +25,18 @@ function App() {
 
   return (
     <>
+    {/* Adds Route path for Navigation */}
       <NavBar user={user} setUser={setUser} />
       <main>
         <Switch>
           <Route path="/new">
             <NewRecipe user={user} />
           </Route>
-          <Route path="/">
-            <RecipeList search={ search } searchChange={setSearch}/>
+          <Route path="/update/:id">
+            <UpdateRecipe user={user} recipes={recipes} setRecipes={setRecipes}/>
           </Route>
-          <Route path="/update">
-            <UpdateRecipe user={user}/>
+          <Route path="/">
+            <RecipeList search={ search } searchChange={setSearch} recipes={recipes} setRecipes={setRecipes}/>
           </Route>
         </Switch>
         <Footer />
