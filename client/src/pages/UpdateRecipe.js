@@ -2,10 +2,11 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
 import styled from "styled-components";
-// import ReactMarkdown from "react-markdown";
+import { useParams } from "react-router-dom"
 import { Button, Error, FormField, Input, Label, Textarea } from "../styles";
 
-function UpdateRecipe() {
+function UpdateRecipe({recipes, setRecipes}) {
+  const {id} = useParams() //useParams for prop drilling from App component so as to use the id
   const [title, setTitle] = useState("");
   const [minutesToComplete, setMinutesToComplete] = useState("");
   const [instructions, setInstructions] = useState();
@@ -13,11 +14,15 @@ function UpdateRecipe() {
   const [isLoading, setIsLoading] = useState(false);
   const [imageUrl, setImageUrl] = useState("")
   const history = useHistory();
+  const updatedRecipe = recipes[parseInt(id)-1]
+
+  // This displays on the console the object.id while updating
+  console.log(recipes[parseInt(id)-1])
 
   function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
-    fetch(`/recipes`, {
+    fetch(`/recipes/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -48,7 +53,9 @@ function UpdateRecipe() {
             <Input
               type="text"
               id="title"
+              placeholder={updatedRecipe.title}
               value={title}
+              required={true}
               onChange={(e) => setTitle(e.target.value)}
             />
           </FormField>
@@ -57,6 +64,8 @@ function UpdateRecipe() {
             <Input
               type="number"
               id="minutesToComplete"
+              placeholder={updatedRecipe.minutes_to_complete}
+              required={true}
               value={minutesToComplete}
               onChange={(e) => setMinutesToComplete(e.target.value)}
             />
@@ -66,6 +75,8 @@ function UpdateRecipe() {
             <Textarea
               id="instructions"
               rows="10"
+              placeholder={updatedRecipe.instructions}
+              required={true}
               value={instructions}
               onChange={(e) => setInstructions(e.target.value)}
             />
@@ -75,6 +86,8 @@ function UpdateRecipe() {
             <Input
               type="text"
               id="imageUrl"
+              placeholder={updatedRecipe.image_url}
+              required={true}
               value={imageUrl}
               onChange={(e) => setImageUrl(e.target.value)}
             />
