@@ -55,7 +55,7 @@ function NewRecipe({ user }) {
     <Wrapper>
       <WrapperChild>
         <h2>Create Recipe</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="forms" style={{textAlign:"center"}}>
           <FormField>
             <Label htmlFor="title">Title</Label>
             <Input

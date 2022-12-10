@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { useParams } from "react-router-dom"
 import { Button, Error, FormField, Input, Label, Textarea } from "../styles";
 
-function UpdateRecipe({recipes, setRecipes}) {
+function UpdateRecipe({recipes}) {
   const {id} = useParams() //useParams for prop drilling from App component so as to use the id
   const [title, setTitle] = useState("");
   const [minutesToComplete, setMinutesToComplete] = useState("");
