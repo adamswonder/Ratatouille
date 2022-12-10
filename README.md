@@ -82,8 +82,10 @@ $ npm start - to get react-app running on a browser
 For back-end:-
 
 ```bash
-bundle install to run bundler and get all the gems
-rails s to start the rails server sync with front-end
+
+$ bundle install to run bundler and get all the gems
+$ rails s to start the rails server sync with front-end
+
 ```
 
 ​
