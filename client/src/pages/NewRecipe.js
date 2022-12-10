@@ -11,16 +11,20 @@ function NewRecipe({ user }) {
   
 ## Ingredients
 
-- 1c Sugar
-- 1c Spice
+- Append ingredientes here
+- Just like this one
+- It will be displayed as a markup to
+  for you to view as you create a recipe!
 
 ## Instructions
 
 **Mix** sugar and spice. _Bake_ for 30 minutes.
+
+**Click on submit recipe below to create a sample**
   `);
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [imageUrl, setImageUrl] = useState("")
+  const [imageUrl, setImageUrl] = useState("https://i.ibb.co/gJVMBD4/Black-bean-burrito-balls-600x400-1.png")
   const history = useHistory();
 
   function handleSubmit(e) {
@@ -108,6 +112,7 @@ function NewRecipe({ user }) {
           <cite>By {user.username}</cite>
         </p>
         <ReactMarkdown>{instructions}</ReactMarkdown>
+        <img src={imageUrl} alt="Append Url" style={{width:300, height:300, objectFit:"cover"}}/>
       </WrapperChild>
     </Wrapper>
   );
