@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles";
-import { RiInstagramFill } from "react-icons/ri"
-
+import { RiInstagramFill,RiFacebookCircleFill } from "react-icons/ri"
+import { AiFillTwitterCircle } from "react-icons/ai"
 
 function NavBar({ user, setUser, searchChange }) {
   function handleLogoutClick() {
@@ -16,11 +16,10 @@ function NavBar({ user, setUser, searchChange }) {
 
   return (
     <Wrapper>
-      <div className="socials">
-        <RiInstagramFill style={{ color: '#F94223', fontSize: '35px' }} /><RiInstagramFill style={{ color: '#F94223', fontSize: '35px' }} /><RiInstagramFill style={{ color: '#F94223', fontSize: '35px' }} />
+      <div id="icon">
+        <AiFillTwitterCircle style={{ color: '#F94223', fontSize: '35px' }} /><RiFacebookCircleFill style={{ color: '#F94223', fontSize: '35px' }} /><RiInstagramFill style={{ color: '#F94223', fontSize: '35px' }} />
       </div>
       <Logo>
-      {/* <RiInstagramFill style={{ color: '#F94223', fontSize: '35px' }} /><RiInstagramFill style={{ color: '#F94223', fontSize: '35px' }} /><RiInstagramFill style={{ color: '#F94223', fontSize: '35px' }} /> */}
         <Link to="/">Ratatouille</Link>
       </Logo>
       <Nav>

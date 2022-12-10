@@ -24,10 +24,10 @@
     border: none;
     border-radius: 25px;
     opacity: 60%;
-    font-size: large;
+    font-size: x-large;
     text-align: center;
 }
-
-.card {
-    object-fit: cover;
+#icon {
+    position: absolute;
+    left: 2rem;
 }

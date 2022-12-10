@@ -1,17 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Box, Button } from "../styles";
 import "../index.css"
 
-function RecipeList({ searchChange, search }) {
-  const [recipes, setRecipes] = useState([]);
+function RecipeList({ searchChange, search, recipes, setRecipes }) {
 
   useEffect(() => {
     fetch("/recipes")
       .then((r) => r.json())
       .then(setRecipes);
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -30,7 +30,7 @@ function RecipeList({ searchChange, search }) {
             <Recipe key={recipe.id}>
               <Box>
                 {/* TODO: RESIZE IMAGE HOLDERS */}
-                <img src={recipe.image_url} alt="Holder" style={{maxWidth:500, maxHeight:600}}/>
+                <img src={recipe.image_url} alt="Holder" style={{ width: 500, height: 500, objectFit: "cover" }} />
                 <h2>{recipe.title}</h2>
                 <p>
                   <em>Time to Complete: {recipe.minutes_to_complete} minutes</em>
@@ -39,23 +39,19 @@ function RecipeList({ searchChange, search }) {
                 </p>
                 <ReactMarkdown>{recipe.instructions}</ReactMarkdown>
                 {/* TODO: work on update */}
-                <Button onClick={()=>{
-                  fetch(`/recipes/${recipe.id}`,{
-                    method:"PATCH"
-                  }).then((r)=>r.json())
-                  .then((data)=> data.map(d => d.id !== recipe.id))
-                }} as={Link} to="/update">
-                  Edit
-                </Button>
-                <Button onClick={() => {
-                  fetch(`/recipes/${recipe.id}`, {
-                    method: "DELETE"
-                  })
-                    // .then((r) => r.json())
-                    .then(() => {
-                      setRecipes((prev) => prev.filter(reci => reci.id !== recipe.id))
+                  <Button as={Link} to={`/update/${recipe.id}`}>
+                    Edit
+                  </Button>
+                  <gap id="gap"></gap>
+                  <Button onClick={() => {
+                    fetch(`/recipes/${recipe.id}`, {
+                      method: "DELETE"
                     })
-                }}>Delete</Button>
+                      // .then((r) => r.json())
+                      .then(() => {
+                        setRecipes((prev) => prev.filter(reci => reci.id !== recipe.id))
+                      })
+                  }}>Delete</Button>
               </Box>
             </Recipe>
           ))
