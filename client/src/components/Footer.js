@@ -1,5 +1,7 @@
 import React from 'react'
 import '../index.css'
+import { RiInstagramFill,RiFacebookCircleFill } from "react-icons/ri"
+import { AiFillTwitterCircle } from "react-icons/ai"
 
 function Footer() {
   return (
@@ -38,15 +40,13 @@ function Footer() {
         </section>
     </div> <hr />
     <div style={{display: "flex", justifyContent: "center"}}>
-        <p> &copy; 2022 RATATOULIE, Kenya. All rights reserved.</p>
-        <p>
-            <i className="fa-brands fa-facebook"></i> &nbsp; 
-            <i className="fa-brands fa-instagram"></i> &nbsp;
-            <i className="fa-brands fa-twitter"></i> &nbsp;
-            <i className="fa-brands fa-linkedin"></i>
-        </p>
+        <p> &copy; <strong>2022 RATATOULIE, Kenya. All rights reserved.</strong></p>
     </div>
-    
+    <div style={{display: 'flex', justifyContent: 'center'}}>
+            <RiInstagramFill style={{ color: '#F94223', fontSize: '35px' }} />&nbsp;
+            <AiFillTwitterCircle style={{ color: '#F94223', fontSize: '35px' }} />&nbsp;
+            <RiFacebookCircleFill style={{ color: '#F94223', fontSize: '35px' }} />&nbsp;
+        </div>
 </footer>
   )
 }
