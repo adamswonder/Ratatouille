@@ -30,7 +30,7 @@ function RecipeList({ searchChange, search, recipes, setRecipes }) {
             <Recipe key={recipe.id}>
               <Box>
                 {/* TODO: RESIZE IMAGE HOLDERS */}
-                <img src={recipe.image_url} alt="Holder" style={{ width: 500, height: 500, objectFit: "cover" }} />
+                <img src={recipe.image_url} alt="Holder" style={{ width: 500, height: 500, objectFit: "cover", borderRadius:20 }} />
                 <h2>{recipe.title}</h2>
                 <p>
                   <em>Time to Complete: {recipe.minutes_to_complete} minutes</em>

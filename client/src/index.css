@@ -1,33 +1,41 @@
-.App{
-    background-color: black;
-    color: white;
+.App {
+  background-color: black;
+  color: white;
 }
-.footer{
-    background-color: #F94223;
-    text-align: left;
-    display: flex;
-    justify-content: space-evenly; 
-    color: white;   
+.footer {
+  background-color: #f94223;
+  text-align: left;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
 }
 
-.footer li{
-    list-style: none;
+.footer li {
+  list-style: none;
 }
 .background {
-    background-image: url("./pages/landing.jpg");
-    padding: 10%;
-    background-position: no-repeat;
+  background-image: url("./pages/landing.jpg");
+  padding: 10%;
+  background-position: no-repeat;
 }
 #search {
-    width: 50%;
-    height: 60px;
-    border: none;
-    border-radius: 25px;
-    opacity: 60%;
-    font-size: x-large;
-    text-align: center;
+  width: 50%;
+  height: 60px;
+  border: none;
+  border-radius: 25px;
+  opacity: 60%;
+  font-size: x-large;
+  text-align: center;
+}
+.forms {
+  background-image: url("https://i.ibb.co/6H0btxT/u-https-images-pexels-com-photos-616401-pexels-photo-616401-jpeg-cs-srgb-dl-food-salad-healthy-61640.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4.5pc;
+  border-radius: 30px;
 }
 #icon {
-    position: absolute;
-    left: 2rem;
+  position: absolute;
+  left: 2rem;
 }

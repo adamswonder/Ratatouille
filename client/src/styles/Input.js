@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Input = styled.input`
   border-radius: 6px;
   border: 1px solid transparent;
-  border-color: #dbdbdb;
+  border-color: #ff6655;
   -webkit-appearance: none;
   max-width: 100%;
   width: 100%;
