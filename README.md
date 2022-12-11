@@ -50,18 +50,18 @@ Once a user signs up and/ is logged in, they are able to search for a recipe, cr
 ## Overview
 
 ​
-![My Image](./register.png)
+![My Image](./images/register.png)
 ​
-![My Image](./login.png)
+![My Image](./images/login.png)
 ​
-![My Image](./land.png)
+![My Image](./images/land.png)
 
-![My Image](./recipes.png)
+![My Image](./images/recipes.png)
 
 ## ERD showing table relationship
 
 ​
-![My Image](./drawSQL.png)
+![My Image](./images/drawSQL.png)
 
 ## Setup
 
