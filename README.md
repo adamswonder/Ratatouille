@@ -104,4 +104,4 @@ $ rails s to start the rails server sync with front-end
 - [Nana Olomaiyani](https://github.com/olomaiyani) - Front-end Developer
 - [Victor Muhita](https://github.com/Vicstudentwatch) - Front-end Developer
 - [Cyntia Njomo](https://github.com/CynthiaNgoiri) - Back-end Developer
-- [Daniel Gathemia]() - Front-end Developer
+- [Daniel Gathemia](https://github.com/Dgathemia) - Front-end Developer
